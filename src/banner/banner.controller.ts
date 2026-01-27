@@ -3,6 +3,7 @@ import { BannerService } from './banner.service';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { extname } from 'path';
+import { Express } from 'express';
 
 @Controller('banners')
 export class BannerController {

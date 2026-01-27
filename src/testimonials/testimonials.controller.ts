@@ -4,6 +4,7 @@ import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { extname } from 'path';
 import { TestimonialsService } from './testimonials.service';
+import { Express } from 'express';
 
 @Controller('testimonials')
 export class TestimonialsController {

@@ -3,6 +3,7 @@
 import { Injectable } from '@nestjs/common';
 import { CategoryService } from '../category/category.service';
 import { PrismaService } from '../prisma/prisma.service';
+import { Express } from 'express';
 
 @Injectable()
 export class ProductService {

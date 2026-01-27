@@ -187,6 +187,7 @@ import { FilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { ProductService } from './product.service';
 import { extname } from 'path';
+import { Express } from 'express';
 
 @Controller('products')
 export class ProductController {

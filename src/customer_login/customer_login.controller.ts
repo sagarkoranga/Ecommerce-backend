@@ -6,6 +6,7 @@ import { LoginDto } from './dto/login.dto';
 import { CustomerLoginService } from './customer_login.service';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
+import { Express } from 'express';
 
 @Controller('customer')
 export class CustomerLoginController {
