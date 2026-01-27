@@ -12,8 +12,8 @@ import {
   ParseIntPipe,
 } from '@nestjs/common';
 import { OrderService } from './order.service';
-import { JwtGuard } from 'src/common/jwtguard.guard';
-import { JwtAuthGuard } from 'src/auth/jwt/jwt.guard';
+import { JwtGuard } from '../common/jwtguard.guard';
+import { JwtAuthGuard } from '../auth/jwt/jwt.guard';
 
 @Controller('orders')
  // 🔥 Protect ALL routes by default
