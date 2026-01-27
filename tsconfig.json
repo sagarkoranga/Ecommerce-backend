@@ -22,5 +22,6 @@
 
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false
-  }
+  },
+  "exclude": ["node_modules", "dist", "test"]
 }
