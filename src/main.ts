@@ -13,8 +13,8 @@ async function bootstrap() {
    origin: [
     'http://localhost:5173', // Frontend 1
     'http://localhost:5174',
-    'ecommerce-admin-n7vmbgqxu-sagarkorangas-projects.vercel.app', // Admin Frontend
-    "ecommerce-frontend-chi-coral.vercel.app" // Frontend 2
+   'https://ecommerce-admin-git-main-sagarkorangas-projects.vercel.app',
+    'https://ecommerce-frontend-chi-coral.vercel.app', // Frontend 2
   ], // your frontend
     credentials: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
