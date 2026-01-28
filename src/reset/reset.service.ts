@@ -28,6 +28,9 @@ export class ResetService  {
     
     const transporter = nodemailer.createTransport({
       service: 'gmail',
+        host: process.env.MAIL_HOST,
+  port: Number(process.env.MAIL_PORT),
+  secure: false,
       auth: {
         user: process.env.EMAIL,
         pass: process.env.EMAIL_PASS,
