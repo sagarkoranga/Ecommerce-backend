@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "moduleResolution": "node",
-    
-
     "target": "ES2020",
     "outDir": "./dist",
     "rootDir": "./src",
@@ -16,13 +13,9 @@
 
     "sourceMap": true,
     "removeComments": true,
-    "incremental": true,
 
-    "strictNullChecks": true,
-    "skipLibCheck": true,
-
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false
+    "strict": false,
+    "skipLibCheck": true
   },
-  "exclude": ["node_modules", "dist", "test","**/*.spec.ts"]
+  "exclude": ["node_modules", "dist", "test", "**/*.spec.ts"]
 }
