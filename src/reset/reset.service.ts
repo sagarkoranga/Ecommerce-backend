@@ -26,22 +26,27 @@ export class ResetService {
     });
 
 
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      host: process.env.MAIL_HOST,
-      port: Number(process.env.MAIL_PORT),
-      secure: false,
-      auth: {
-        user: process.env.EMAIL,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+  const transporter = nodemailer.createTransport({
+    host: 'smtp-relay.brevo.com',
+    port: 587,
+    secure: false,
+    auth: {
+      user: process.env.BREVO_USER,
+      pass: process.env.BREVO_PASS,
+    },
+  });
 
-    await transporter.sendMail({
-      to: username,
-      subject: 'Password Reset OTP',
-      html: `<h3>Your OTP is: ${otp}</h3><p>Valid for 5 minutes</p>`,
-    });
+  await transporter.sendMail({
+    from: '"Ecommerce Support" <no-reply@yourdomain.com>',
+    to: username,
+    subject: 'Password Reset OTP',
+    html: `
+      <h2>Password Reset</h2>
+      <p>Your OTP is:</p>
+      <h1>${otp}</h1>
+      <p>Valid for 5 minutes</p>
+    `,
+  }); 
 
     return { message: 'OTP sent to email' };
   }
