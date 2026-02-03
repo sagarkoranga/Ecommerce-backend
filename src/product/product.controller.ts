@@ -313,7 +313,7 @@ findByCategory(@Param('id') id: string) {
       filename: (req, file, cb) => {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
         const ext = extname(file.originalname);
-        cb(null, `product-${uniqueSuffix}${ext}`);
+        cb(null, `${uniqueSuffix}${ext}`);
       },
     }),
   }),
